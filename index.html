@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>横スクロールアクションゲーム MVP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <h1>アクションゲーム</h1>
+            <div class="game-info">
+                <span>スコア: <span id="score">0</span></span>
+                <span>ライフ: <span id="life">3</span></span>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        
+        <div class="game-controls">
+            <p>← → キーで移動 | スペースキーでジャンプ</p>
+        </div>
+
+        <div id="gameOverScreen" class="modal hidden">
+            <div class="modal-content">
+                <h2 id="gameOverTitle">ゲームオーバー</h2>
+                <p id="gameOverMessage"></p>
+                <button onclick="location.reload()">もう一度プレイ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
